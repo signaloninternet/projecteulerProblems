@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main(void){
+    /*Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.*/
+    
+    int sumsquare = 0, squaresum = 0, num = 0, n;
+    
+    printf("Enter the number: ");
+    scanf("%d", &n);
+    
+    for(int i = 0; i <= n; i++){
+        sumsquare += i * i;
+        
+    }
+    
+    for(int j = 0; j <= n; j++){
+        num += j;
+    }
+    
+    squaresum = num * num;
+    
+    int difference = squaresum - sumsquare;
+    
+    printf("%d \t", difference);
+    
+    
+}
