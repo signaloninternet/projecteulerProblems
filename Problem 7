@@ -1,0 +1,24 @@
+/*By listing the first six prime number: 2,3,5,7,11 and 13, we can see that the 6th prime number is 12.
+What is the 10001st prime number ?*/
+
+#include<stdio.h>
+int isPrime(int x);
+int main(void){
+    int count = 0, number = 0, i = 2;
+    while(count != 10001){
+        if (isPrime(i)){
+            count++;
+            number = i;
+        }
+        i++;
+    }
+    printf("%d", number);
+}
+
+int isPrime(int x){
+    if (x <= 1) return 0;
+    for(int n = 2; n * n <= x; n++){
+        if(x % n == 0) return 0;
+    }
+    return 1;
+}
